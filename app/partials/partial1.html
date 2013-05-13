@@ -1,0 +1,32 @@
+<table>
+  <thead>
+    <tr>
+      <th>Athlete</th>
+      <th>Team</th>
+      <th>Time</th>
+      <th>Points</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="player in challenge.FantasyChallenge.PositionOneAvailablePlayerList">
+      <td><img src="img/player.jpg" width="70" height="70"></td>
+      <td>
+        <span class="player-name">{{player.Name}}</span><br>
+        <span class="player-team">{{player.TeamName}}</span>
+      </td>
+      <td>12/16</td>
+      <td>{{player.FantasyCost}}</td>
+      <td>
+        <div ng-switch on="player.TeamName">
+          <div ng-switch-when="San Antonio Spurs">
+            Available
+          </div>
+          <div ng-switch-default>
+            Other team
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

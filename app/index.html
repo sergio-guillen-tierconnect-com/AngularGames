@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+  <div ng-controller="BodyCtrl">
+    <div class="header-bar" style="width: 100%; text-align: center">
+      Draft Team&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${{accountBalance}}
+    </div>
+    <div class="container">
+      <div class="category current">
+        <a href="#" title="">IF</a>
+      </div>
+      <div class="category">
+        <a href="#" title="">OF</a>
+      </div>
+      <div class="category">
+        <a href="#" title="">P</a>
+      </div>
+    </div>
+    <div style="width: 100%; text-align: center">Points Bank: {{pointsBank}} pts</div>
+    <div class="options">
+      <div>
+        <a href="#/view2" class="option">Games</a>
+      </div>
+      <div>
+        <a href="#/view2" class="option">Games</a>
+      </div>
+      <div>
+        <a href="#/view1" class="option current1">Op3</a>
+      </div>
+      <div>
+        <a href="#/view2" class="option">Games</a>
+      </div>
+    </div>
+  </div>
+
+  <div ng-view></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+  -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>

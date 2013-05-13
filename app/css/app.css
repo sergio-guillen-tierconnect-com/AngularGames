@@ -1,0 +1,50 @@
+/* app css stylesheet */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+}
+.category {
+  width: 33%;
+  height: 34px;
+  float: left;
+  text-align: center;
+  padding-top: 13px;
+  border-bottom: 2px solid #C8C9C0;
+  color: #C8C9C0;
+}
+.category, .current {
+  border-bottom: 2px solid #15DDDD;
+  color: #15DDDD;
+}
+.category,.current a {
+  color: #15DDDD;
+  font-weight: bold;
+  text-decoration: none;
+}
+.category, a {
+  color: #A8A897;
+  font-weight: bold;
+  text-decoration: none;
+}
+.option {
+  background: white;
+  width: 25%;
+  float: left;
+}
+.option .current1 {
+  background: #DEDFD9;
+}
+.option, a{
+  text-decoration: none;
+}
+
+.player-name {
+  color: #2E5E8D;
+  font-weight: bold;
+}
+.player-team {
+  color: #2E5E8D;
+}
