@@ -1,4 +1,4 @@
 AngularGames
 ============
 
-Testing angular seed
+Testing angular seed and REST api
