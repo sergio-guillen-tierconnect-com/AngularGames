@@ -12,4 +12,6 @@ var app = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.dir
 //Add this to have access to a global variable
 app.run(function ($rootScope) {
     $rootScope.pointsBank = 0; //global variable
+    $rootScope.positionNames = [];
+    $rootScope.styleWidth = 0.0;
 });

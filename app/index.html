@@ -11,7 +11,7 @@
       Draft Team&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${{accountBalance}}
     </div>
     <div class="container">
-      <div class="category current">
+      <!-- <div class="category current">
         <a href="#" title="">IF</a>
       </div>
       <div class="category">
@@ -19,6 +19,9 @@
       </div>
       <div class="category">
         <a href="#" title="">P</a>
+      </div> -->
+      <div style="width: {{styleWidth}}%" class="category" ng-repeat="positionName in positionNames">
+        <a href="#" title="">{{positionName}}</a>
       </div>
     </div>
     <div style="width: 100%; text-align: center">Points Bank: {{pointsBank}} pts</div>

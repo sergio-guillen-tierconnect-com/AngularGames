@@ -16,13 +16,14 @@ function BodyCtrl ($scope) {
 function DraftTeamCtrl ($scope, $http, $rootScope) {
   $http.get('data/players.json').success(function(data) {
     $scope.challenge = data;
-    if ($scope.challenge.FantasyChallenge.PositionOneAvailablePlayerList.length > 0) {
-      $rootScope.pointsBank = $scope.challenge.FantasyChallenge.PositionOneAvailablePlayerList[0].FantasyCost;
-    }
-  });
-  
+    $rootScope.pointsBank = $scope.challenge.FantasyChallenge.AvailableFantasyPoints;
+    $rootScope.positionNames = $scope.challenge.FantasyChallenge.PositionNames;
+    // In order to have responsive style, if three options, 33% of width
+    // if 4 options 25% and so on
+    $rootScope.styleWidth = 100.0/$rootScope.positionNames.length;
+  });  
+
   $scope.selectPlayer = function(player) {
-    $rootScope.pointsBank = player.FantasyCost;
     
     // Used to change class for selected table row
     // class is called "active" in app.css
