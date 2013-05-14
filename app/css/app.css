@@ -48,3 +48,6 @@ html, body {
 .player-team {
   color: #2E5E8D;
 }
+.active {
+  background: #E3F9FD;
+}

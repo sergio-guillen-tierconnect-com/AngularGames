@@ -9,7 +9,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="player in challenge.FantasyChallenge.PositionOneAvailablePlayerList">
+    <tr ng-class="{true:'active',false:''}[active.ID == player.ID]"
+        ng-click="selectPlayer(player)" ng-repeat="player in challenge.FantasyChallenge.PositionOneAvailablePlayerList">
       <td><img src="img/player.jpg" width="70" height="70"></td>
       <td>
         <span class="player-name">{{player.Name}}</span><br>
