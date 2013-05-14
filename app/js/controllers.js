@@ -7,6 +7,7 @@ angular.module('myApp.controllers', []);
 function BodyCtrl ($scope) {
   // Para header-bar
   $scope.accountBalance = 30;
+
 }
 
 /* Uses $rootScope in order to have global variables
@@ -29,4 +30,8 @@ function DraftTeamCtrl ($scope, $http, $rootScope) {
     // class is called "active" in app.css
     $scope.active = player;
   }
+
+    $scope.draft = function(name) {
+        alert(name + '!');
+    }
 }
